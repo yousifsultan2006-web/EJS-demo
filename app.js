@@ -1,10 +1,20 @@
 import express from 'express';
 const app = express();
 
+app.set('view engine', 'ejs');
+
 const PORT = 3002;
 
 app.get('/', (req, res) => {
-    res.sendFile(`${import.meta.dirname}/views/home.html`);
+    let user = {
+        name: "Yousif",
+        color: "purple",
+        food: "pizza",
+        grade: 1.9,
+        age: 21
+
+    }
+    res.render('home', { user });
 });
 
 app.listen(PORT, () => {
