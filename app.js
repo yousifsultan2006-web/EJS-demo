@@ -11,8 +11,14 @@ app.get('/', (req, res) => {
         color: "purple",
         food: "pizza",
         grade: 1.9,
-        age: 21
+        age: 21, 
+        hobbies: ["snowboarding", "fishing", "swimming", "building computers"]
 
+    }
+    let friend = {
+        name: "John",
+        age: 25
+        
     }
     res.render('home', { user });
 });
